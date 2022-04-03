@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {},
+            fontFamily:{
+                red: ['Red Hat Display'],
+            }
+          }
+        }
+      </script>
+    <title>Order Summary</title>
+</head>
+<body class="bg-[#F5F7FF] font-red">
+    <img class="absolute z-0 invisible md:visible" src="./assets/images/pattern-background-desktop.svg" alt="">
+    <img class="absolute z-0 visible md:invisible" src="./assets/images/pattern-background-mobile.svg" alt="">
+    <div class="w-screen h-screen grid place-content-center px-2 relative z-10 "> <!-- container -->        
+        <div 
+        class="
+        max-w-md mx-auto 
+        bg-white rounded-xl shadow-md 
+        overflow-hidden 
+        "
+        > <!-- card -->
+            <img class="w-full" src="./assets/images/illustration-hero.svg" alt="">
+            <div class="mt-6 w-4/5 mx-auto"> <!-- texto principal -->
+                <h1 class="text-center font-bold py-2 text-3xl">Order Summary</h1>
+                <p class=" text-center mx-auto px-3">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+                <div class="bg-slate-100 h-min mx-auto p-3 my-3 rounded-xl flex justify-between items-center"> <!-- plan anual -->
+                    <div class="flex">
+                        <div class="rounded-full p-3 bg-[#E0E8FF] inline-block">🎵</div>
+                        <div class="flex flex-col pl-4">
+                            <p class="font-bold">Annual plan</p>
+                            <p>$59.99/year</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer text-[#1F2F56]"><a class="underline" href="#">Change</a></div>
+                </div>   
+                <button class="w-full py-2 font-bold cursor-pointer drop-shadow-xl rounded-xl bg-[#3829E0] text-gray-100 hover:bg-blue-700 transition">Proceed to Payment</button>         
+                <div class="my-7 text-center font-bold cursor-pointer">Cancel order</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
